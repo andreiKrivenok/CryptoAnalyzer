@@ -13,7 +13,7 @@ public class InputBF {
                 FileReader in = new FileReader(path);
                 BufferedReader reader = new BufferedReader(in)) {
             while (reader.ready()) {
-                inputText  =reader.readLine();}
+                inputText  = reader.readLine();}
 
 
         } catch (

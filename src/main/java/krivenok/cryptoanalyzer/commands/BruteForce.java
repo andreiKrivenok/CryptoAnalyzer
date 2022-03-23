@@ -17,10 +17,7 @@ public class BruteForce implements Action {
 
         for (int key = 0; key < Constants.ALPHABET.size(); key++) {
             counter = 0;
-            String inputTextDecode = decodeForBruteForce(new String[]{parameters[0], parameters[1], String.valueOf(Integer.parseInt(parameters[2])
-                    + key)});
-            System.out.println(inputTextDecode);
-            System.out.println("____________________");
+            String inputTextDecode = decodeForBruteForce(parameters[0], String.valueOf(key));
             counter = findCountSpaces(inputTextDecode);
 
             if (counter > bestCountOfSpaces) {
@@ -29,7 +26,6 @@ public class BruteForce implements Action {
             }
         }
         System.out.println("Ключ для дешифрования методом bruteForce = " + bestCountOfKey);
-
         decoder.execute(new String[]{parameters[0], parameters[1], String.valueOf(bestCountOfKey)});
 
 
@@ -46,16 +42,15 @@ public class BruteForce implements Action {
         return counterFind;
     }
 
-    public String decodeForBruteForce(String[] parameters) {
-        String inputText = InputBF.inputRead(Constants.TXT_FOLDER + parameters[0]);
+    public String decodeForBruteForce(String path, String key) {
+        String inputText = InputBF.inputRead(Constants.TXT_FOLDER + path);
         char[] sourceTextArray = inputText.toCharArray();
         for (int i = 0; i < sourceTextArray.length; i++) {
             if (Constants.ALPHABET.contains(sourceTextArray[i])) {
                 sourceTextArray[i] = Constants.ALPHABET.get((Constants.ALPHABET.indexOf(sourceTextArray[i]) + (Constants.ALPHABET.size()) -
-                        Integer.parseInt(parameters[2])) % Constants.ALPHABET.size());
+                        Integer.parseInt(key)) % Constants.ALPHABET.size());
             }
         }
-        String sourceText = new String(sourceTextArray);
-        return sourceText;
+        return new String(sourceTextArray);
     }
 }
