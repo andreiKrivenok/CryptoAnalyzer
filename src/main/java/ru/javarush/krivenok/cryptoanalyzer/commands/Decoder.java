@@ -1,10 +1,10 @@
-package krivenok.cryptoanalyzer.commands;
+package ru.javarush.krivenok.cryptoanalyzer.commands;
 
-import krivenok.cryptoanalyzer.constants.Constants;
-import krivenok.cryptoanalyzer.entity.Result;
-import krivenok.cryptoanalyzer.entity.ResultCode;
-import krivenok.cryptoanalyzer.io.Input;
-import krivenok.cryptoanalyzer.io.Output;
+import ru.javarush.krivenok.cryptoanalyzer.constants.Constants;
+import ru.javarush.krivenok.cryptoanalyzer.entity.Result;
+import ru.javarush.krivenok.cryptoanalyzer.entity.ResultCode;
+import ru.javarush.krivenok.cryptoanalyzer.io.Input;
+import ru.javarush.krivenok.cryptoanalyzer.io.Output;
 
 public class Decoder implements Action {
     String inputText;

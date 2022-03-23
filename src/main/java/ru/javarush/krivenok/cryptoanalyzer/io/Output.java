@@ -1,4 +1,4 @@
-package krivenok.cryptoanalyzer.io;
+package ru.javarush.krivenok.cryptoanalyzer.io;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;

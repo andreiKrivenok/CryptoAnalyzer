@@ -1,6 +1,6 @@
-package krivenok.cryptoanalyzer.commands;
+package ru.javarush.krivenok.cryptoanalyzer.commands;
 
-import krivenok.cryptoanalyzer.constants.Constants;
+import ru.javarush.krivenok.cryptoanalyzer.constants.Constants;
 
 import java.io.BufferedReader;
 import java.io.FileReader;

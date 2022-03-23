@@ -1,4 +1,4 @@
-package krivenok.cryptoanalyzer.io;
+package ru.javarush.krivenok.cryptoanalyzer.io;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -13,7 +13,6 @@ public class Input {
                 BufferedReader reader = new BufferedReader(in)) {
             while (reader.ready()) {
                  inputText  = inputText + reader.readLine();}
-
 
         } catch (
                 IOException e) {

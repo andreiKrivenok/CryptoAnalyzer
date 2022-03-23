@@ -1,13 +1,10 @@
-package krivenok.cryptoanalyzer.entity;
+package ru.javarush.krivenok.cryptoanalyzer.entity;
 
-import krivenok.cryptoanalyzer.entity.ResultCode;
 
 public class Result {
 
     private final String message;
-
     private final ResultCode resultCode;
-
 
     public Result(String message, ResultCode resultCode) {
         this.message = message;

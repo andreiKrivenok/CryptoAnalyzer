@@ -1,4 +1,4 @@
-package krivenok.cryptoanalyzer.exceptions;
+package ru.javarush.krivenok.cryptoanalyzer.exceptions;
 
 public class AppException extends RuntimeException{
 

@@ -1,8 +1,8 @@
-package krivenok.cryptoanalyzer.commands;
+package ru.javarush.krivenok.cryptoanalyzer.commands;
 
-import krivenok.cryptoanalyzer.constants.Constants;
-import krivenok.cryptoanalyzer.entity.Result;
-import krivenok.cryptoanalyzer.entity.ResultCode;
+import ru.javarush.krivenok.cryptoanalyzer.constants.Constants;
+import ru.javarush.krivenok.cryptoanalyzer.entity.Result;
+import ru.javarush.krivenok.cryptoanalyzer.entity.ResultCode;
 
 
 public class BruteForce implements Action {
@@ -24,7 +24,7 @@ public class BruteForce implements Action {
                 bestCountOfKey = key;
             }
         }
-        System.out.println("Ключ для дешифрования методом bruteForce = " + bestCountOfKey);
+        System.out.println("Key for decryption method bruteForce = " + bestCountOfKey);
         decoder.execute(new String[]{parameters[0], parameters[1], String.valueOf(bestCountOfKey)});
         return new Result("decode all right", ResultCode.OK);
     }
